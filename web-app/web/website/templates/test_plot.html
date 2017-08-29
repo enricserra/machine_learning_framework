@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Catalog Summary</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <script src="../static/javascripts/Chart.bundle.min.js"></script>
+    <script src="../static/javascripts/utils.js"></script>
+
+    <link rel="stylesheet" href="../static/gel/css/sampletracking.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .top-fixed {
+            position: fixed;
+            top: 0px;
+            left: -200px;
+            border-bottom: solid 2px gray;
+            padding: 5px 20px 0px 20px;
+            background: white;
+        }
+        .top-fixed table {
+            margin: 0;
+            table-layout: fixed;
+
+        }
+        .top-fixed th {
+            border-bottom: none!important
+        }
+        .bottom-fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: white;
+            border-top: solid 1px gray;
+            padding: 8px 10px 0 10px
+        }
+        .bottom-fixed ul {margin: 0}
+        .content-short { padding-bottom: 30px }
+        th.rotate {
+             /* Something you can count on */
+            height: 220px;
+            white-space: nowrap;
+        }
+        th.rotate > div {
+            transform:
+            /* Magic Numbers */
+            translate(10px, 0px)
+            /* 45 is really 360 - 45 */
+            rotate(315deg);
+            width: 30px;
+        }
+        th.rotate > div > span {
+            padding: 5px 10px;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .table th {
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header_div">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Summary </a></li>
+    </ul>
+
+    <ol class="breadcrumb">
+        <li>Overview</li>
+        <li style="float:right;color:grey"> V0.1 </li>
+        <li style="float:right;display:none" id="network-error">
+            <span class="label label-warning">&#x26A0; CAN'T REFRESH</span>
+        </li>
+    </ol>
+    <div id="error-container"></div>
+    <hr>
+
+</div>
+<h2> A STUPID PLOT</h2>
+
+<div style="width:1000;height:400">
+    <canvas id="myChart">
+</div>
+
+<div style="width:400;height:400">
+    <canvas id="anotherChart" width="400" height="400"></canvas>
+</div>
+
+</body>
+
+<script>
+plotNumeric("myChart", 0, 100, '# of Votes', [12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8, 12, 19, 3, 5, 2, 3, 25,25, 33, 12, 5, 7, 8], true)
+
+</script>
